@@ -2,7 +2,7 @@
 # Quiz-App-Using-JavaScript
 Used HTML CSS and JavaScript Only
 
-# HTML :
+# HTML
 <!DOCTYPE html>: This declaration defines the document type and version of HTML being used. It tells the browser to render the page in standards mode.
 <html>: The root element of an HTML page.
 lang="en": Specifies the language of the document (English in this case), which helps search engines and browsers.
@@ -32,8 +32,8 @@ class="btn": Class for styling.
 onclick="submitQuiz()": JavaScript function that is called when the button is clicked.
 
 
-# CSS :
-# *: The universal selector applies styles to all elements on the page.
+# CSS
+*: The universal selector applies styles to all elements on the page.
 padding: 0;: Resets the default padding of all elements to zero.
 margin: 0;: Resets the default margin of all elements to zero.
 box-sizing: border-box;: Changes the box model so that padding and border are included in the element's total width and height, making layout calculations easier.
@@ -65,7 +65,7 @@ background-color: rgb(255, 255, 255, 0.7);: Sets the background color to white w
 border-radius: 5px;: Rounds the corners of the box with a radius of 5 pixels.
 
 
-JAVASCRIPT : 
+# JAVASCRIPT
 const questions: Declares a constant variable named questions that holds an array of question objects.
 Each object contains:
 que: The question text.
