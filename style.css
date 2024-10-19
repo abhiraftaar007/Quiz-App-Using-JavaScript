@@ -5,8 +5,14 @@
 }
 
 body{
-    background-color: #3498db;
+    background-color: rgb(20,198,218);
     font-family: 'Roboto', sans-serif;
+}
+
+.head1{
+    padding-bottom: 55px;
+    font-size: 91px;
+    color: rgba(160, 173, 78, 0.6);
 }
 
 .main{
@@ -16,14 +22,15 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: rgb(27,99,84);
 }
 
 #box{
     width: 40%;
-    height: 340px;
+    /* height: 340px; */
     padding:15px;
     box-shadow: 0px 0px 5px grey;
-    background-color: white;
+    background-color: rgb(255, 255, 255, 0.7);
     border-radius: 5px;
 }
 
@@ -40,5 +47,5 @@ body{
     color:white;
     border: none;
     border-radius: 5px;
-    background-color: #3498db;
+    background-color: rgba(160, 173, 78, 0.618);
 }

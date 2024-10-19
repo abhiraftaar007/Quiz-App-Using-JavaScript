@@ -80,7 +80,7 @@ const reset = () => {
 
 const endQuiz = () => {
   document.getElementById("box").innerHTML = `
-     <div style="text-align:center; justfy-content:center;margin-top:17%">
+     <div style="text-align:center; justfy-content:center;">
      <h3> Thankyou for playing the Quiz</h3>
      <h2> ${right} / ${total} are correct </h2>
      </div>
