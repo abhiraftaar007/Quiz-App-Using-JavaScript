@@ -97,3 +97,6 @@ optionInputs.forEach((input) => { ... });: Iterates through each radio button.
 if (input.checked) { answer = input.value; }: Checks if the radio button is selected and assigns its value to answer.
 return answer;: Returns
 
+
+Thankyou!
+
