@@ -1,0 +1,98 @@
+# Quiz-App-Using-JavaScript
+Used HTML CSS and JavaScript Only
+
+# HTML
+<!DOCTYPE html>: This declaration defines the document type and version of HTML being used. It tells the browser to render the page in standards mode.
+<html>: The root element of an HTML page.
+lang="en": Specifies the language of the document (English in this case), which helps search engines and browsers.
+<head>: Contains meta-information about the document, such as its title, character set, and links to stylesheets.
+<meta charset="UTF-8">: Specifies the character encoding for the HTML document, ensuring that it can display a wide range of characters.
+<meta name="viewport">: Controls the layout on mobile browsers. The content attribute sets the width to the device's width and the initial zoom level to 1.
+<title>: Sets the title of the document, which appears in the browser tab.
+<style>: Contains CSS styles for the document.
+@import: Imports a font from Google Fonts, specifically the "Roboto" font in various weights.
+<link>: Links to an external CSS file (style.css) for additional styling.
+<body>: Contains the content of the document that is displayed in the browser.
+<div class="main">: A division element with a class of "main" used for styling and layout purposes.
+html
+<div id="box">: A division element with an ID of "box", which can be targeted with CSS or JavaScript.
+<h2>: A heading element, indicating a level 2 heading. The ID "quesBox" can be used for styling or scripting.
+<div class="row">: A division element with a class of "row", likely used for layout purposes.
+<input>: An input element for user interaction.
+class="options": Class for styling.
+id="option1": Unique identifier for the input.
+type="radio": Specifies that this input is a radio button.
+value="a": The value submitted if this option is selected.
+name="option": Groups radio buttons so that only one can be selected at a time.
+<label>: Associates a text label with the radio button. The for attribute links it to the corresponding input by ID.
+The same structure is repeated for options 2, 3, and 4.
+<button>: A clickable button.
+class="btn": Class for styling.
+onclick="submitQuiz()": JavaScript function that is called when the button is clicked.
+
+
+# CSS
+*: The universal selector applies styles to all elements on the page.
+padding: 0;: Resets the default padding of all elements to zero.
+margin: 0;: Resets the default margin of all elements to zero.
+box-sizing: border-box;: Changes the box model so that padding and border are included in the element's total width and height, making layout calculations easier.
+
+body: Targets the <body> element.
+background-color: rgb(20, 198, 218);: Sets the background color of the body to a light blue shade using RGB values.
+font-family: 'Roboto', sans-serif;: Sets the font of the body text to 'Roboto', with a fallback to a generic sans-serif font if 'Roboto' is unavailable.
+
+.head1: A class selector targeting elements with the class "head1".
+padding-bottom: 55px;: Adds 55 pixels of padding to the bottom of the element.
+font-size: 91px;: Sets the font size to 91 pixels, making it very large.
+color: rgba(160, 173, 78, 0.6);: Sets the text color using RGBA, where the last value (0.6) represents the opacity (60% opaque).
+
+.main: A class selector for the main container.
+width: 100%;: Sets the width to 100% of the parent element.
+height: 100vh;: Sets the height to 100% of the viewport height, making it full-screen.
+display: flex;: Enables flexbox layout for the container.
+justify-content: center;: Centers child elements horizontally.
+align-items: center;: Centers child elements vertically.
+flex-direction: column;: Arranges child elements in a column layout.
+background-color: rgb(27, 99, 84);: Sets the background color to a dark greenish shade.
+
+#box: An ID selector targeting the element with the ID "box".
+width: 40%;: Sets the width to 40% of the parent element.
+/* height: 340px; */: A commented-out line that suggests a fixed height of 340 pixels, which is currently not applied.
+padding: 15px;: Adds 15 pixels of padding inside the box.
+box-shadow: 0px 0px 5px grey;: Adds a subtle shadow effect around the box, giving it a lifted appearance.
+background-color: rgb(255, 255, 255, 0.7);: Sets the background color to white with 70% opacity, allowing some background color to show through.
+border-radius: 5px;: Rounds the corners of the box with a radius of 5 pixels.
+
+
+# JAVASCRIPT
+const questions: Declares a constant variable named questions that holds an array of question objects.
+Each object contains:
+que: The question text.
+a, b, c, d: Possible answer options.
+correct: The correct answer's identifier (e.g., "a").
+
+let index = 0;: Initializes the current question index to 0.
+let total = questions.length;: Stores the total number of questions.
+let right = 0, wrong = 0;: Initializes counters for correct and incorrect answers.
+
+const quesBox: Selects the HTML element with the ID quesBox to display the current question.
+const optionInputs: Selects all input elements with the class options (the radio buttons for answers).
+javascript
+
+const laodQuestion = () => { ... }: Defines a function to load the current question.
+if (index == total) { return endQuiz(); }: Checks if all questions have been answered; if so, it calls endQuiz().
+reset();: Calls the reset function to clear previous selections.
+const data = questions[index];: Retrieves the current question data.
+quesBox.innerText = ...: Updates the question display.
+optionInputs[n].nextElementSibling.innerText = data.a;: Sets the text of the corresponding answer options.
+
+const submitQuiz = () => { ... }: Defines a function to handle quiz submission.
+const ans = getAnswer();: Calls getAnswer() to retrieve the selected answer.
+if (ans === data.correct) { right++; }: Increments the correct answer counter if the answer is correct.
+index++;: Moves to the next question.
+laodQuestion();: Loads the next question.
+
+const getAnswer = () => { ... }: Defines a function to get the selected answer.
+optionInputs.forEach((input) => { ... });: Iterates through each radio button.
+if (input.checked) { answer = input.value; }: Checks if the radio button is selected and assigns its value to answer.
+return answer;: Returns
